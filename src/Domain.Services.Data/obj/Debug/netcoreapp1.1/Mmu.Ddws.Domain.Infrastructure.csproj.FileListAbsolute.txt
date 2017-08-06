@@ -1,8 +1,0 @@
-C:\MyGit\Personal\DomainDrivenWebService\Mmu.Ddws.Domain.Infrastructure\bin\Debug\netcoreapp1.1\Mmu.Ddws.Domain.Infrastructure.deps.json
-C:\MyGit\Personal\DomainDrivenWebService\Mmu.Ddws.Domain.Infrastructure\obj\Debug\netcoreapp1.1\Mmu.Ddws.Domain.Infrastructure.csprojResolveAssemblyReference.cache
-C:\MyGit\Personal\DomainDrivenWebService\Mmu.Ddws.Domain.Infrastructure\obj\Debug\netcoreapp1.1\Mmu.Ddws.Domain.Infrastructure.AssemblyInfo.cs
-C:\MyGit\Personal\DomainDrivenWebService\Mmu.Ddws.Domain.Infrastructure\bin\Debug\netcoreapp1.1\Mmu.Ddws.Domain.Infrastructure.dll
-C:\MyGit\Personal\DomainDrivenWebService\Mmu.Ddws.Domain.Infrastructure\bin\Debug\netcoreapp1.1\Mmu.Ddws.Domain.dll
-C:\MyGit\Personal\DomainDrivenWebService\Mmu.Ddws.Domain.Infrastructure\bin\Debug\netcoreapp1.1\Mmu.Ddws.Domain.Extensions.dll
-C:\MyGit\Personal\DomainDrivenWebService\Mmu.Ddws.Domain.Infrastructure\bin\Debug\netcoreapp1.1\Mmu.Ddws.Domain.pdb
-C:\MyGit\Personal\DomainDrivenWebService\Mmu.Ddws.Domain.Infrastructure\bin\Debug\netcoreapp1.1\Mmu.Ddws.Domain.Extensions.pdb
