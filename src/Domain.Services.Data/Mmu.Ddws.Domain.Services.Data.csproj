@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp1.1</TargetFramework>
+    <RootNamespace>Mmu.Ddws.Domain.Services.Infrastructure</RootNamespace>
+    <AssemblyName>Mmu.Ddws.Domain.Services.Infrastructure</AssemblyName>
+    <Features>IOperation</Features>
+    <CodeAnalysisRuleSet>..\..\CA_ProductionCode.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="2.0.0-beta2" />
+    <PackageReference Include="MongoDB.Driver" Version="2.4.4" />
+    <PackageReference Include="StructureMap" Version="4.5.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Mmu.Ddws.Common.csproj" />
+    <ProjectReference Include="..\Domain.Services\Mmu.Ddws.Domain.Services.csproj" />
+    <ProjectReference Include="..\Domain\Mmu.Ddws.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

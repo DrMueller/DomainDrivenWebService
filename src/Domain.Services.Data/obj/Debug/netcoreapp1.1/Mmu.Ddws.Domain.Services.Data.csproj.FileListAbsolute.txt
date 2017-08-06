@@ -1,0 +1,13 @@
+C:\MyGit\Personal\DomainDrivenWebService\src\Domain.Services.Data\bin\Debug\netcoreapp1.1\Mmu.Ddws.Domain.Services.Infrastructure.deps.json
+C:\MyGit\Personal\DomainDrivenWebService\src\Domain.Services.Data\bin\Debug\netcoreapp1.1\Mmu.Ddws.Domain.Services.Infrastructure.dll
+C:\MyGit\Personal\DomainDrivenWebService\src\Domain.Services.Data\bin\Debug\netcoreapp1.1\Mmu.Ddws.Domain.Services.Infrastructure.pdb
+C:\MyGit\Personal\DomainDrivenWebService\src\Domain.Services.Data\bin\Debug\netcoreapp1.1\Mmu.Ddws.Common.dll
+C:\MyGit\Personal\DomainDrivenWebService\src\Domain.Services.Data\bin\Debug\netcoreapp1.1\Mmu.Ddws.Domain.dll
+C:\MyGit\Personal\DomainDrivenWebService\src\Domain.Services.Data\bin\Debug\netcoreapp1.1\Mmu.Ddws.Domain.Services.dll
+C:\MyGit\Personal\DomainDrivenWebService\src\Domain.Services.Data\bin\Debug\netcoreapp1.1\Mmu.Ddws.Common.pdb
+C:\MyGit\Personal\DomainDrivenWebService\src\Domain.Services.Data\bin\Debug\netcoreapp1.1\Mmu.Ddws.Domain.Services.pdb
+C:\MyGit\Personal\DomainDrivenWebService\src\Domain.Services.Data\bin\Debug\netcoreapp1.1\Mmu.Ddws.Domain.pdb
+C:\MyGit\Personal\DomainDrivenWebService\src\Domain.Services.Data\obj\Debug\netcoreapp1.1\Mmu.Ddws.Domain.Services.Data.csprojResolveAssemblyReference.cache
+C:\MyGit\Personal\DomainDrivenWebService\src\Domain.Services.Data\obj\Debug\netcoreapp1.1\Mmu.Ddws.Domain.Services.Data.AssemblyInfo.cs
+C:\MyGit\Personal\DomainDrivenWebService\src\Domain.Services.Data\obj\Debug\netcoreapp1.1\Mmu.Ddws.Domain.Services.Infrastructure.dll
+C:\MyGit\Personal\DomainDrivenWebService\src\Domain.Services.Data\obj\Debug\netcoreapp1.1\Mmu.Ddws.Domain.Services.Infrastructure.pdb

@@ -1,0 +1,73 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{4F4567A5-49AA-4068-B0C1-A20B0EE8C088}"
+	ProjectSection(SolutionItems) = preProject
+		docs\_todos.md = docs\_todos.md
+		docs\DDWS_Architecture .EAP = docs\DDWS_Architecture .EAP
+		docs\DomainDrivenDesign.md = docs\DomainDrivenDesign.md
+		docs\General.md = docs\General.md
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mmu.Ddws.Application", "src\Application\Mmu.Ddws.Application.csproj", "{7D5CA4C3-C884-45C4-AC7B-3B899FF49A9B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mmu.Ddws.Common", "src\Common\Mmu.Ddws.Common.csproj", "{ED68E7B4-2210-4C7C-A952-C75B5352D4BA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mmu.Ddws.Domain", "src\Domain\Mmu.Ddws.Domain.csproj", "{6A86982E-F149-4947-90B7-6C50CA573F90}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mmu.Ddws.Domain.Services", "src\Domain.Services\Mmu.Ddws.Domain.Services.csproj", "{09917369-85A3-4E22-8745-B59FE35A5BC7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mmu.Ddws.WebServices", "src\WebServices\Mmu.Ddws.WebServices.csproj", "{1ADFAF06-1E13-44CB-8BB9-05B239F46524}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "settings", "settings", "{1953DEEA-DE6F-4418-AC14-A9FD2918C522}"
+	ProjectSection(SolutionItems) = preProject
+		CA_ProductionCode.ruleset = CA_ProductionCode.ruleset
+		CA_UnitTests.ruleset = CA_UnitTests.ruleset
+		Settings.StyleCop = Settings.StyleCop
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mmu.Ddws.Application.Infrastructure", "src\Application.Infrastructure\Mmu.Ddws.Application.Infrastructure.csproj", "{7F9992F5-7A68-438C-9D0C-8ECAEE04D245}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mmu.Ddws.Domain.Services.Data", "src\Domain.Services.Data\Mmu.Ddws.Domain.Services.Data.csproj", "{D06F173D-3174-4A8B-BBEE-D9357CFBB063}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7D5CA4C3-C884-45C4-AC7B-3B899FF49A9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D5CA4C3-C884-45C4-AC7B-3B899FF49A9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D5CA4C3-C884-45C4-AC7B-3B899FF49A9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D5CA4C3-C884-45C4-AC7B-3B899FF49A9B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED68E7B4-2210-4C7C-A952-C75B5352D4BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED68E7B4-2210-4C7C-A952-C75B5352D4BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED68E7B4-2210-4C7C-A952-C75B5352D4BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED68E7B4-2210-4C7C-A952-C75B5352D4BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A86982E-F149-4947-90B7-6C50CA573F90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A86982E-F149-4947-90B7-6C50CA573F90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A86982E-F149-4947-90B7-6C50CA573F90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A86982E-F149-4947-90B7-6C50CA573F90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09917369-85A3-4E22-8745-B59FE35A5BC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09917369-85A3-4E22-8745-B59FE35A5BC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09917369-85A3-4E22-8745-B59FE35A5BC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09917369-85A3-4E22-8745-B59FE35A5BC7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1ADFAF06-1E13-44CB-8BB9-05B239F46524}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1ADFAF06-1E13-44CB-8BB9-05B239F46524}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1ADFAF06-1E13-44CB-8BB9-05B239F46524}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1ADFAF06-1E13-44CB-8BB9-05B239F46524}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F9992F5-7A68-438C-9D0C-8ECAEE04D245}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F9992F5-7A68-438C-9D0C-8ECAEE04D245}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F9992F5-7A68-438C-9D0C-8ECAEE04D245}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F9992F5-7A68-438C-9D0C-8ECAEE04D245}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D06F173D-3174-4A8B-BBEE-D9357CFBB063}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D06F173D-3174-4A8B-BBEE-D9357CFBB063}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D06F173D-3174-4A8B-BBEE-D9357CFBB063}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D06F173D-3174-4A8B-BBEE-D9357CFBB063}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
