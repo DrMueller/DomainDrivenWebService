@@ -1,4 +1,4 @@
-﻿using Mmu.Ddws.Domain.Common.ModelAbstractions;
+﻿using Mmu.Ddws.Domain.Infrastructure.ModelAbstractions;
 
 namespace Mmu.Ddws.Domain.Services.Common.Repositories
 {

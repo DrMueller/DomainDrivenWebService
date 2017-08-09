@@ -1,8 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq.Expressions;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using Mmu.Ddws.Domain.Common.ModelAbstractions;
+using Mmu.Ddws.Domain.Infrastructure.ModelAbstractions;
+using Mmu.Ddws.Domain.Infrastructure.Specifications;
 
 namespace Mmu.Ddws.Domain.Services.Common.Repositories
 {
@@ -13,7 +12,7 @@ namespace Mmu.Ddws.Domain.Services.Common.Repositories
 
         Task<IReadOnlyCollection<T>> LoadAllAsync();
 
-        Task<IReadOnlyCollection<T>> LoadAsync(Expression<Func<T, bool>> predicate);
+        Task<IReadOnlyCollection<T>> LoadAsync(ISpecification<T> specification);
 
         Task<T> LoadByIdAsync(string id);
 

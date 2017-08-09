@@ -1,5 +1,5 @@
-﻿using Mmu.Ddws.Domain.Common.Invariance;
-using Mmu.Ddws.Domain.IndividualManagement.Models.ValueObjects;
+﻿using Mmu.Ddws.Domain.IndividualManagement.Models.ValueObjects;
+using Mmu.Ddws.Domain.Infrastructure.Invariance;
 
 namespace Mmu.Ddws.Domain.IndividualManagement.Models.Entities
 {

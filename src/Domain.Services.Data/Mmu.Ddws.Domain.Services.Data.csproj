@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp1.1</TargetFramework>
-    <RootNamespace>Mmu.Ddws.Domain.Services.Infrastructure</RootNamespace>
-    <AssemblyName>Mmu.Ddws.Domain.Services.Infrastructure</AssemblyName>
+    <RootNamespace>Mmu.Ddws.Domain.Services.Data</RootNamespace>
+    <AssemblyName>Mmu.Ddws.Domain.Services.Data</AssemblyName>
     <Features>IOperation</Features>
     <CodeAnalysisRuleSet>..\..\CA_ProductionCode.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>

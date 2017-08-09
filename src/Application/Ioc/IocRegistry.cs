@@ -1,4 +1,4 @@
-﻿using Mmu.Ddws.Application.Common.Mapping;
+﻿using Mmu.Ddws.Application.Common.DtoMapping;
 using StructureMap;
 
 namespace Mmu.Ddws.Application.Ioc
@@ -12,7 +12,7 @@ namespace Mmu.Ddws.Application.Ioc
                 {
                     scan.TheCallingAssembly(); // Scan this assembly
                     scan.WithDefaultConventions();
-                    scan.AddAllTypesOf(typeof(IMapper<,>));
+                    scan.AddAllTypesOf(typeof(IDtoMapper<,>));
                 });
         }
     }

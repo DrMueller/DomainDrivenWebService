@@ -38,6 +38,14 @@ namespace Mmu.Ddws.WebServices.IndividualManagement.Controllers
             return Ok(result);
         }
 
+        [HttpGet("FemaleAdults")]
+        public async Task<IActionResult> GetFemaleAdultIndividuals()
+        {
+            var result = await _individualSearchService.SearchFemaleAdultsAsync();
+
+            return Ok(result);
+        }
+
         [HttpPut]
         public async Task<IActionResult> PutIndividualAsync([FromBody] IndividualDto individualDto)
         {

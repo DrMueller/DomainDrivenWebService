@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Diagnostics;
 using Microsoft.Extensions.DependencyInjection;
-using Mmu.Ddws.Application.Common.Mapping;
 using StructureMap;
 
 namespace Mmu.Ddws.WebServices.Infrastructure.Initialization
@@ -21,13 +19,11 @@ namespace Mmu.Ddws.WebServices.Infrastructure.Initialization
                             scan.AssembliesFromApplicationBaseDirectory();
                             scan.LookForRegistries();
                             scan.WithDefaultConventions();
-                            scan.AddAllTypesOf(typeof(IMapper<,>));
                         });
 
                     config.Populate(services);
                 });
 
-            Debug.WriteLine(container.WhatDidIScan());
             var result = container.GetInstance<IServiceProvider>();
             return result;
         }

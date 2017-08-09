@@ -7,5 +7,7 @@ namespace Mmu.Ddws.Application.IndividualManagement.Services
     public interface IIndividualSearchService
     {
         Task<IReadOnlyCollection<IndividualDto>> SearchAllAsync();
+
+        Task<IReadOnlyCollection<IndividualDto>> SearchFemaleAdultsAsync();
     }
 }

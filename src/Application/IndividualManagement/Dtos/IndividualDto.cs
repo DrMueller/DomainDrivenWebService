@@ -1,4 +1,6 @@
-﻿namespace Mmu.Ddws.Application.IndividualManagement.Dtos
+﻿using System;
+
+namespace Mmu.Ddws.Application.IndividualManagement.Dtos
 {
     public class IndividualDto
     {
@@ -9,5 +11,7 @@
         public string Id { get; set; }
 
         public string LastName { get; set; }
+
+        public DateTime BirthDate { get; set; }
     }
 }

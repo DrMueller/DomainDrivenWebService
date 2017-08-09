@@ -1,5 +1,5 @@
 ﻿using System.Threading.Tasks;
-using Mmu.Ddws.Application.Common.Mapping;
+using Mmu.Ddws.Application.Common.DtoMapping;
 using Mmu.Ddws.Application.IndividualManagement.Dtos;
 using Mmu.Ddws.Domain.IndividualManagement.Models.AggregateRoots;
 using Mmu.Ddws.Domain.Services.Common.Repositories;
@@ -8,10 +8,10 @@ namespace Mmu.Ddws.Application.IndividualManagement.Services.Implementation
 {
     public class IndividualUpdateService : IIndividualUpdateService
     {
-        private readonly IMappingService _mappingService;
+        private readonly IDtoMappingService _mappingService;
         private readonly IRepositoryFactory _repositoryFactory;
 
-        public IndividualUpdateService(IRepositoryFactory repositoryFactory, IMappingService mappingService)
+        public IndividualUpdateService(IRepositoryFactory repositoryFactory, IDtoMappingService mappingService)
         {
             _repositoryFactory = repositoryFactory;
             _mappingService = mappingService;

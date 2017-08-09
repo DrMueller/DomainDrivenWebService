@@ -1,16 +1,16 @@
-﻿using Mmu.Ddws.Application.Common.Mapping;
+﻿using Mmu.Ddws.Application.Common.DtoMapping;
 using Mmu.Ddws.Domain.IndividualManagement.Models.AggregateRoots;
 using Mmu.Ddws.Domain.IndividualManagement.Models.ValueObjects;
 using Mmu.Ddws.Domain.Services.IndividualManagement.Factories;
 
 namespace Mmu.Ddws.Application.IndividualManagement.Dtos.Mappers
 {
-    public class IndividualDtoMapper : IMapper<IndividualDto, Individual>
+    public class IndividualDtoMapper : IDtoMapper<IndividualDto, Individual>
     {
         private readonly IIndividualFactory _individualFactory;
-        private readonly IMappingService _mappingService;
+        private readonly IDtoMappingService _mappingService;
 
-        public IndividualDtoMapper(IIndividualFactory individualFactory, IMappingService mappingService)
+        public IndividualDtoMapper(IIndividualFactory individualFactory, IDtoMappingService mappingService)
         {
             _individualFactory = individualFactory;
             _mappingService = mappingService;
@@ -19,7 +19,7 @@ namespace Mmu.Ddws.Application.IndividualManagement.Dtos.Mappers
         public Individual MapToDomainObject(IndividualDto dto)
         {
             var gender = _mappingService.MapToDomain<IndividualGenderDto, IndividualGender>(dto.Gender);
-            var individual = _individualFactory.CreateIndividual(dto.FirstName, dto.LastName, gender);
+            var individual = _individualFactory.CreateIndividual(dto.FirstName, dto.LastName, gender, dto.BirthDate);
             return individual;
         }
 

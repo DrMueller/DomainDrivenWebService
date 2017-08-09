@@ -1,8 +1,9 @@
-﻿using System.Collections.Generic;
-using Mmu.Ddws.Domain.Common.Invariance;
-using Mmu.Ddws.Domain.Common.ModelAbstractions;
+﻿using System;
+using System.Collections.Generic;
 using Mmu.Ddws.Domain.IndividualManagement.Models.Entities;
 using Mmu.Ddws.Domain.IndividualManagement.Models.ValueObjects;
+using Mmu.Ddws.Domain.Infrastructure.Invariance;
+using Mmu.Ddws.Domain.Infrastructure.ModelAbstractions;
 
 namespace Mmu.Ddws.Domain.IndividualManagement.Models.AggregateRoots
 {
@@ -10,18 +11,22 @@ namespace Mmu.Ddws.Domain.IndividualManagement.Models.AggregateRoots
     {
         private readonly List<Address> _addresses;
 
-        public Individual(string firstName, string lastName, IndividualGender gender)
+        public Individual(string firstName, string lastName, IndividualGender gender, DateTime birthDate)
         {
             Guard.StringNotNullorEmpty(() => firstName);
             Guard.StringNotNullorEmpty(() => lastName);
+            Guard.ObjectNotNull(() => birthDate);
 
             FirstName = firstName;
             LastName = lastName;
             Gender = gender;
+            BirthDate = birthDate;
             _addresses = new List<Address>();
         }
 
         public IReadOnlyCollection<Address> Addresses => _addresses;
+
+        public DateTime BirthDate { get; }
 
         public string FirstName { get; }
 
