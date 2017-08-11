@@ -1,5 +1,5 @@
-﻿using Mmu.Ddws.Domain.IndividualManagement.Models.AggregateRoots;
-using Mmu.Ddws.Domain.Services.Data.Common.Mapping.Mappers;
+﻿using Mmu.Ddws.Domain.IndividualManagement.Models;
+using Mmu.Ddws.Domain.Services.Data.Infrastructure.Mapping.Mappers;
 using MongoDB.Bson.Serialization;
 
 namespace Mmu.Ddws.Domain.Services.Data.IndividualManagement.Mappers

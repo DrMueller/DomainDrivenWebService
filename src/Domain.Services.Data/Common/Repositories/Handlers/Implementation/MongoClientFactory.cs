@@ -2,7 +2,7 @@
 using System.Security.Authentication;
 using Mmu.Ddws.Common.ApplicationSettings.Models;
 using Mmu.Ddws.Common.ApplicationSettings.Services;
-using Mmu.Ddws.Domain.Services.Data.Common.MongoDbInitialization;
+using Mmu.Ddws.Domain.Services.Data.Infrastructure.Mapping;
 using MongoDB.Driver;
 
 namespace Mmu.Ddws.Domain.Services.Data.Common.Repositories.Handlers.Implementation
@@ -11,9 +11,9 @@ namespace Mmu.Ddws.Domain.Services.Data.Common.Repositories.Handlers.Implementat
     {
         private readonly MongoDbSettings _mongoDbSettings;
 
-        public MongoClientFactory(IAppSettingsProvider appSettingsProvider, IMongoDbInitializationService mongoDbInitializationService)
+        public MongoClientFactory(IAppSettingsProvider appSettingsProvider, IMappingInitializationService mappingInitializationService)
         {
-            mongoDbInitializationService.AssureEverythingIsInitialized();
+            mappingInitializationService.AssureMappinsgAreInitialized();
             _mongoDbSettings = appSettingsProvider.GetAppSettings().MongoDbSettings;
         }
 

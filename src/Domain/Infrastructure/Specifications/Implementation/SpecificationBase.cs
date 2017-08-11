@@ -7,21 +7,9 @@ namespace Mmu.Ddws.Domain.Infrastructure.Specifications.Implementation
     public abstract class SpecificationBase<T> : ISpecification<T>
         where T : AggregateRoot
     {
-        public abstract Expression<Func<T, bool>> ToExpression();
-
         public SpecificationBase<T> And(SpecificationBase<T> specification)
         {
             return new AndSpecification<T>(this, specification);
-        }
-
-        public SpecificationBase<T> Not(SpecificationBase<T> specification)
-        {
-            return new NotSpecification<T>(specification);
-        }
-
-        public SpecificationBase<T> Or(SpecificationBase<T> specification)
-        {
-            return new OrSpecification<T>(this, specification);
         }
 
         public bool IsSatisfiedBy(T aggregateRoot)
@@ -31,5 +19,17 @@ namespace Mmu.Ddws.Domain.Infrastructure.Specifications.Implementation
 
             return result;
         }
+
+        public SpecificationBase<T> Not()
+        {
+            return new NotSpecification<T>(this);
+        }
+
+        public SpecificationBase<T> Or(SpecificationBase<T> specification)
+        {
+            return new OrSpecification<T>(this, specification);
+        }
+
+        public abstract Expression<Func<T, bool>> ToExpression();
     }
 }

@@ -1,9 +1,9 @@
-﻿using Mmu.Ddws.Domain.IndividualManagement.Models.ValueObjects;
-using Mmu.Ddws.Domain.Infrastructure.Invariance;
+﻿using Mmu.Ddws.Domain.Infrastructure.Invariance;
+using Mmu.Ddws.Domain.Infrastructure.ModelAbstractions;
 
-namespace Mmu.Ddws.Domain.IndividualManagement.Models.Entities
+namespace Mmu.Ddws.Domain.IndividualManagement.Models
 {
-    public class Address
+    public class Address : Entity
     {
         public Address(AddressType addressType, string street, string zip, string city)
         {
@@ -17,12 +17,12 @@ namespace Mmu.Ddws.Domain.IndividualManagement.Models.Entities
             City = city;
         }
 
-        public AddressType AddressType { get; }
+        public AddressType AddressType { get; private set; }
 
-        public string City { get; }
+        public string City { get; private set; }
 
-        public string Street { get; }
+        public string Street { get; private set; }
 
-        public string Zip { get; }
+        public string Zip { get; private set; }
     }
 }

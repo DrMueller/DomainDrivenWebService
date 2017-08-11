@@ -1,14 +1,15 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using Mmu.Ddws.Common.ServiceProvisioning;
-using Mmu.Ddws.Domain.Services.Data.Common.Mapping.Mappers;
+using Mmu.Ddws.Domain.Services.Data.Infrastructure.Mapping.Mappers;
+using MongoDB.Bson.Serialization;
 
-namespace Mmu.Ddws.Domain.Services.Data.Common.Mapping.Implementation
+namespace Mmu.Ddws.Domain.Services.Data.Infrastructure.Mapping.Implementation
 {
     public class MappingInitializationService : IMappingInitializationService
     {
         private readonly object _lock = new object();
         private readonly IReadOnlyCollection<IMapper> _mappers;
-        private bool _isInitialized;
 
         public MappingInitializationService(IProvisioningService provisioningService)
         {
@@ -17,14 +18,14 @@ namespace Mmu.Ddws.Domain.Services.Data.Common.Mapping.Implementation
 
         public void AssureMappinsgAreInitialized()
         {
-            if (_isInitialized)
+            if (BsonClassMap.GetRegisteredClassMaps().Any())
             {
                 return;
             }
 
             lock (_lock)
             {
-                if (_isInitialized)
+                if (BsonClassMap.GetRegisteredClassMaps().Any())
                 {
                     return;
                 }
@@ -33,8 +34,6 @@ namespace Mmu.Ddws.Domain.Services.Data.Common.Mapping.Implementation
                 {
                     mapper.InitializeMapping();
                 }
-
-                _isInitialized = true;
             }
         }
     }

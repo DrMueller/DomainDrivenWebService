@@ -7,7 +7,6 @@ using Mmu.Ddws.Domain.Infrastructure.ModelAbstractions;
 using Mmu.Ddws.Domain.Infrastructure.Specifications;
 using Mmu.Ddws.Domain.Services.Common.Repositories;
 using Mmu.Ddws.Domain.Services.Data.Common.Repositories.Handlers;
-using MongoDB.Bson.Serialization;
 using MongoDB.Driver;
 
 namespace Mmu.Ddws.Domain.Services.Data.Common.Repositories
@@ -46,15 +45,6 @@ namespace Mmu.Ddws.Domain.Services.Data.Common.Repositories
             return result;
         }
 
-        private async Task<IReadOnlyCollection<T>> LoadByExpressionAsync(Expression<Func<T, bool>> predicate)
-        {
-            var collection = _mongoDbAccess.GetDatabaseCollection<T>();
-
-            var filter = _filterFactory.CreateFilterDefinition(predicate);
-            var result = await collection.Find(filter).ToListAsync();
-            return result;
-        }
-
         public async Task<T> LoadByIdAsync(string id)
         {
             var entries = await LoadByExpressionAsync(x => x.Id == id);
@@ -74,6 +64,15 @@ namespace Mmu.Ddws.Domain.Services.Data.Common.Repositories
             var filter = _filterFactory.CreateFilterDefinition(x => x.Id == aggregateRoot.Id);
             var updateOptions = new FindOneAndReplaceOptions<T> { IsUpsert = false, ReturnDocument = ReturnDocument.After };
             var result = await collection.FindOneAndReplaceAsync(filter, aggregateRoot, updateOptions);
+            return result;
+        }
+
+        private async Task<IReadOnlyCollection<T>> LoadByExpressionAsync(Expression<Func<T, bool>> predicate)
+        {
+            var collection = _mongoDbAccess.GetDatabaseCollection<T>();
+
+            var filter = _filterFactory.CreateFilterDefinition(predicate);
+            var result = await collection.Find(filter).ToListAsync();
             return result;
         }
     }

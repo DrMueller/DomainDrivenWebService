@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.Extensions.DependencyInjection;
+using Mmu.Ddws.Common.ServiceProvisioning;
 using StructureMap;
 
 namespace Mmu.Ddws.WebServices.Infrastructure.Initialization
@@ -25,6 +26,9 @@ namespace Mmu.Ddws.WebServices.Infrastructure.Initialization
                 });
 
             var result = container.GetInstance<IServiceProvider>();
+
+            var provisioningService = result.GetService<IProvisioningService>();
+            ProvisioningServiceSingleton.Initialize(provisioningService);
             return result;
         }
     }

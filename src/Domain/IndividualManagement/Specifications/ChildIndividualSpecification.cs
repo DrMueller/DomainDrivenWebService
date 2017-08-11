@@ -5,11 +5,11 @@ using Mmu.Ddws.Domain.Infrastructure.Specifications.Implementation;
 
 namespace Mmu.Ddws.Domain.IndividualManagement.Specifications
 {
-    public class MaleIndividualSpecification : SpecificationBase<Individual>
+    public class ChildIndividualSpecification : SpecificationBase<Individual>
     {
         public override Expression<Func<Individual, bool>> ToExpression()
         {
-            return f => f.Gender == IndividualGender.Male;
+            return i => i.BirthDate >= DateTime.Now.AddYears(-14);
         }
     }
 }

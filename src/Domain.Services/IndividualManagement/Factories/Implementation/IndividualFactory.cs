@@ -1,6 +1,5 @@
 ﻿using System;
-using Mmu.Ddws.Domain.IndividualManagement.Models.AggregateRoots;
-using Mmu.Ddws.Domain.IndividualManagement.Models.ValueObjects;
+using Mmu.Ddws.Domain.IndividualManagement.Models;
 
 namespace Mmu.Ddws.Domain.Services.IndividualManagement.Factories.Implementation
 {

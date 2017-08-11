@@ -8,6 +8,6 @@ namespace Mmu.Ddws.Application.IndividualManagement.Services
     {
         Task<IReadOnlyCollection<IndividualDto>> SearchAllAsync();
 
-        Task<IReadOnlyCollection<IndividualDto>> SearchFemaleAdultsAsync();
+        Task<IReadOnlyCollection<IndividualDto>> SearchFemaleAdultsOrChildrenAsync();
     }
 }

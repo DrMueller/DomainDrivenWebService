@@ -7,8 +7,8 @@ namespace Mmu.Ddws.Domain.Infrastructure.Specifications
     public interface ISpecification<T>
         where T : AggregateRoot
     {
-        Expression<Func<T, bool>> ToExpression();
-
         bool IsSatisfiedBy(T aggregateRoot);
+
+        Expression<Func<T, bool>> ToExpression();
     }
 }

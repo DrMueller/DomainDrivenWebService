@@ -1,14 +1,13 @@
-﻿using System.Reflection;
-using Mmu.Ddws.Domain.Services.Common.Repositories;
-using Mmu.Ddws.Domain.Services.Data.Common.Mapping;
-using Mmu.Ddws.Domain.Services.Data.Common.Mapping.Implementation;
-using Mmu.Ddws.Domain.Services.Data.Common.Mapping.Mappers;
+﻿using Mmu.Ddws.Domain.Services.Common.Repositories;
 using Mmu.Ddws.Domain.Services.Data.Common.Repositories;
 using Mmu.Ddws.Domain.Services.Data.Common.Repositories.Handlers;
 using Mmu.Ddws.Domain.Services.Data.Common.Repositories.Handlers.Implementation;
+using Mmu.Ddws.Domain.Services.Data.Infrastructure.Mapping;
+using Mmu.Ddws.Domain.Services.Data.Infrastructure.Mapping.Implementation;
+using Mmu.Ddws.Domain.Services.Data.Infrastructure.Mapping.Mappers;
 using StructureMap;
 
-namespace Mmu.Ddws.Domain.Services.Data.Infrastructure
+namespace Mmu.Ddws.Domain.Services.Data.Infrastructure.Ioc
 {
     public class IocRegistry : Registry
     {
@@ -17,9 +16,7 @@ namespace Mmu.Ddws.Domain.Services.Data.Infrastructure
             Scan(
                 scan =>
                 {
-                    scan.Assembly(typeof(IocRegistry).GetTypeInfo().Assembly);
-
-                    //scan.TheCallingAssembly(); // Scan this assembly
+                    scan.TheCallingAssembly(); // Scan this assembly
                     scan.AddAllTypesOf(typeof(IRepository<>));
                     scan.AddAllTypesOf(typeof(IMongoDbFilterDefinitionFactory<>));
                     scan.AddAllTypesOf<IMapper>();

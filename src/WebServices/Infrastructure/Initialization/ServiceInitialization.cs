@@ -1,4 +1,5 @@
 ﻿using System;
+using AutoMapper;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Mmu.Ddws.Common.ApplicationSettings.Models;
@@ -9,6 +10,7 @@ namespace Mmu.Ddws.WebServices.Infrastructure.Initialization
     {
         internal static IServiceProvider InitializeServices(IServiceCollection services, IConfigurationRoot configuration)
         {
+            InitializeAutoMapper(services);
             InitializeAppSettings(services, configuration);
             InitializeCors(services);
 
@@ -35,6 +37,11 @@ namespace Mmu.Ddws.WebServices.Infrastructure.Initialization
                                 .AllowAnyHeader()
                                 .AllowCredentials());
                 });
+        }
+
+        private static void InitializeAutoMapper(IServiceCollection services)
+        {
+            services.AddAutoMapper();
         }
     }
 }

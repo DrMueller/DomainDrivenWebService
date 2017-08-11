@@ -1,4 +1,4 @@
-﻿namespace Mmu.Ddws.Domain.Services.Data.Common.Mapping
+﻿namespace Mmu.Ddws.Domain.Services.Data.Infrastructure.Mapping
 {
     public interface IMappingInitializationService
     {

@@ -17,6 +17,14 @@ namespace Mmu.Ddws.WebServices.IndividualManagement.Controllers
             _individualSearchService = individualSearchService;
         }
 
+        [HttpGet("FemaleAdultsOrChildren")]
+        public async Task<IActionResult> FemaleAdultsOrChildrenIndividuals()
+        {
+            var result = await _individualSearchService.SearchFemaleAdultsOrChildrenAsync();
+
+            return Ok(result);
+        }
+
         [HttpGet]
         public async Task<IActionResult> GetAllIndividuals()
         {
@@ -34,14 +42,6 @@ namespace Mmu.Ddws.WebServices.IndividualManagement.Controllers
                 Id = "Tra124",
                 LastName = "Müller"
             };
-
-            return Ok(result);
-        }
-
-        [HttpGet("FemaleAdults")]
-        public async Task<IActionResult> GetFemaleAdultIndividuals()
-        {
-            var result = await _individualSearchService.SearchFemaleAdultsAsync();
 
             return Ok(result);
         }

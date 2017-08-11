@@ -1,4 +1,4 @@
-﻿namespace Mmu.Ddws.Domain.IndividualManagement.Models.ValueObjects
+﻿namespace Mmu.Ddws.Domain.IndividualManagement.Models
 {
     public enum AddressType
     {

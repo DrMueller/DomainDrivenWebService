@@ -1,11 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using Mmu.Ddws.Domain.IndividualManagement.Models.Entities;
-using Mmu.Ddws.Domain.IndividualManagement.Models.ValueObjects;
 using Mmu.Ddws.Domain.Infrastructure.Invariance;
 using Mmu.Ddws.Domain.Infrastructure.ModelAbstractions;
 
-namespace Mmu.Ddws.Domain.IndividualManagement.Models.AggregateRoots
+namespace Mmu.Ddws.Domain.IndividualManagement.Models
 {
     public class Individual : AggregateRoot
     {
@@ -26,13 +24,13 @@ namespace Mmu.Ddws.Domain.IndividualManagement.Models.AggregateRoots
 
         public IReadOnlyCollection<Address> Addresses => _addresses;
 
-        public DateTime BirthDate { get; }
+        public DateTime BirthDate { get; private set; }
 
-        public string FirstName { get; }
+        public string FirstName { get; private set; }
 
-        public IndividualGender Gender { get; }
+        public IndividualGender Gender { get; private set; }
 
-        public string LastName { get; }
+        public string LastName { get; private set; }
 
         public void AddAddress(Address address)
         {
