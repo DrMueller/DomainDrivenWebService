@@ -1,14 +1,14 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.16
+VisualStudioVersion = 15.0.26730.12
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{4F4567A5-49AA-4068-B0C1-A20B0EE8C088}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".docs", ".docs", "{4F4567A5-49AA-4068-B0C1-A20B0EE8C088}"
 	ProjectSection(SolutionItems) = preProject
-		docs\_todos.md = docs\_todos.md
-		docs\DDWS_Architecture .EAP = docs\DDWS_Architecture .EAP
-		docs\DomainDrivenDesign.md = docs\DomainDrivenDesign.md
-		docs\General.md = docs\General.md
+		.docs\_todos.md = .docs\_todos.md
+		.docs\DDWS_Architecture .EAP = .docs\DDWS_Architecture .EAP
+		.docs\DomainDrivenDesign.md = .docs\DomainDrivenDesign.md
+		.docs\General.md = .docs\General.md
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mmu.Ddws.Application", "src\Application\Mmu.Ddws.Application.csproj", "{7D5CA4C3-C884-45C4-AC7B-3B899FF49A9B}"
@@ -21,7 +21,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mmu.Ddws.Domain.Services", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mmu.Ddws.WebServices", "src\WebServices\Mmu.Ddws.WebServices.csproj", "{1ADFAF06-1E13-44CB-8BB9-05B239F46524}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "settings", "settings", "{1953DEEA-DE6F-4418-AC14-A9FD2918C522}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".settings", ".settings", "{1953DEEA-DE6F-4418-AC14-A9FD2918C522}"
 	ProjectSection(SolutionItems) = preProject
 		CA_ProductionCode.ruleset = CA_ProductionCode.ruleset
 		CA_UnitTests.ruleset = CA_UnitTests.ruleset
@@ -31,6 +31,12 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mmu.Ddws.Application.Infrastructure", "src\Application.Infrastructure\Mmu.Ddws.Application.Infrastructure.csproj", "{7F9992F5-7A68-438C-9D0C-8ECAEE04D245}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mmu.Ddws.Domain.Services.Data", "src\Domain.Services.Data\Mmu.Ddws.Domain.Services.Data.csproj", "{D06F173D-3174-4A8B-BBEE-D9357CFBB063}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{1F826850-F6EA-4676-AE45-5229465270E4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTests", "UnitTests", "{A41F597E-9425-48EF-A5F4-11BE28A01992}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IntegrationTests", "IntegrationTests", "{88AF95D0-E5D6-4BDF-92D2-32ED0851C695}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,5 +75,12 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A41F597E-9425-48EF-A5F4-11BE28A01992} = {1F826850-F6EA-4676-AE45-5229465270E4}
+		{88AF95D0-E5D6-4BDF-92D2-32ED0851C695} = {1F826850-F6EA-4676-AE45-5229465270E4}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {10530836-7B77-477A-8511-B983331EE32F}
 	EndGlobalSection
 EndGlobal

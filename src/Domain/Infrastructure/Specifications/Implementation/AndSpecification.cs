@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Linq.Expressions;
-using Mmu.Ddws.Domain.Infrastructure.ModelAbstractions;
+using Mmu.Ddws.Domain.Areas.Common.ModelAbstractions;
 using Mmu.Ddws.Domain.Infrastructure.Specifications.Handlers;
 
 namespace Mmu.Ddws.Domain.Infrastructure.Specifications.Implementation

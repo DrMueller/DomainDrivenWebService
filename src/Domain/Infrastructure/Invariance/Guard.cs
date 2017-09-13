@@ -14,7 +14,7 @@ namespace Mmu.Ddws.Domain.Infrastructure.Invariance
             if (obj == null)
             {
                 var propertyName = ExpressionHandler.GetPropertyName(propertyExpression);
-                throw new ArgumentException($"String {propertyName} must not be null or empty.");
+                throw new ArgumentException($"Object {propertyName} must not be null.");
             }
         }
 
@@ -26,7 +26,7 @@ namespace Mmu.Ddws.Domain.Infrastructure.Invariance
             if (string.IsNullOrEmpty(stringValue))
             {
                 var propertyName = ExpressionHandler.GetPropertyName(propertyExpression);
-                throw new ArgumentException($"Object {propertyName} must not be null.");
+                throw new ArgumentException($"String {propertyName} must not be null or empty.");
             }
         }
     }
